@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>kasagunotas</title>
+<style>
+ body { margin: 0; }
+ div {
+	position: fixed;
+	font-family: "Helvetica Neue","Helvetica","Arial",sans-serif;
+ }
+
+ .a {
+	left: 0;
+	top: 0;
+	right: 50%;
+	bottom: 50%;
+	width:420px; 
+	height:364px;
+	background-size: cover;
+ }
+   			/*!
+ * 3D Falling Leaves
+ */
+
+  .october-leaf {
+     position: absolute;
+     background-color: transparent;
+     background-image: url('https://kastro-59.github.io/Perla/notas.png');
+     width:420px; 
+     height:364px;
+     background-size: cover;
+     -webkit-transform: translateZ(0);
+     -moz-transform: translateZ(0);
+     transform: translateZ(0);
+  }
+
+     #animation3{
+	position: absolute;
+	left: 55px;
+	top: 25px;
+	height: 35px;
+	width: 35px;
+	}
+
+    .disc{
+	width: 332px;            
+	height: 332px;          
+	background: url(https://kastro-59.github.io/star/CD/q4wyeNb.png)center no-repeat;
+	background-size: cover;
+	position: absolute;
+	opacity: 0.8;
+	z-index: -15;
+	overflow: hidden;
+	left: 255px;
+	top: 11px;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+	
+	
+   }
+   }
+
+    @-moz-keyframes spin {
+    100% {
+     -moz-transform: rotate(360deg);
+   }
+   }
+   @-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+   }
+   @keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+   }
+.data {
+	position: absolute;
+	font-family: 'Reem Kufi', sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	left: 105px;
+	top: 90px;
+	color: #ff0018;
+	width: 236px;
+	height: 19px;
+	z-index: 16;
+	border: 1px;
+}
+#Clock {
+	position: absolute;
+	top: 326px;
+	left: 320px;
+	width: 43px;
+	color: #ff0018;
+	font-family: 'Reem Kufi', sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+</style>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src="https://kastro-59.github.io/repros/rotate3Di.js"></script>
+<script src="https://kastro-59.github.io/repros/rotate3Di.min.js"></script>
+<script src="js/lunaradio.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="js/popper.min.js" ></script>
+
+<center>
+ <style> 
+   <!-- 
+   body { background:url() repeat-x, url('') }*{ cursor:url(https://i.imgur.com/QpftHmt.png),auto} 
+   -->
+</style>
+</center> 
+<div align="center">
+ <div class="player" id="miplayer">
+ <div class="a" style="background-image:url(https://i.imgur.com/xqgqwRs.png)">
+ <div id="kastroplayer" style="width:420px; height:364px;background: transparent url() bottom / cover no-repeat;">loading...</div>	
+</div>
+
+
+ <div class="disc"></div>
+<div id="animation3">
+     <div align="left"><img src="https://kastro-59.github.io/star/CD/TSc5ws2.gif" alt="efec" width="35" height="35"></div>
+   </div>
+</head>
+<body>
+&nbsp;&nbsp; <span id="Clock">12:57:05</span>
+
+
+<script language="JavaScript">
+<!--
+var Elem = document.getElementById("Clock");
+function Horario(){
+var Hoje = new Date();
+var Horas = Hoje.getHours();
+if(Horas < 10){
+Horas = "0"+Horas;
+}
+var Minutos = Hoje.getMinutes();
+if(Minutos < 10){
+Minutos = "0"+Minutos;
+}
+var Segundos = Hoje.getSeconds();
+if(Segundos < 10){
+Segundos = "0"+Segundos;
+}
+Elem.innerHTML = Horas+":"+Minutos+":"+Segundos;
+}
+window.setInterval("Horario()",1000);
+//-->
+</script>
+<div id="data" class="data">
+<script language="javascript">
+
+var fecha=new Date();
+var diames=fecha.getDate();
+var diasemana=fecha.getDay();
+var mes=fecha.getMonth() +1 ;
+var ano=fecha.getFullYear();
+
+var textosemana = new Array (7);
+textosemana[0]="Dom";
+textosemana[1]="Lun";
+textosemana[2]="Mar";
+textosemana[3]="Mie";
+textosemana[4]="Jue";
+textosemana[5]="Vie";
+textosemana[6]="Sab";
+
+var textomes = new Array (12);
+textomes[1]="Ene";
+textomes[2]="Feb";
+textomes[3]="Mar";
+textomes[4]="Abr";
+textomes[5]="May";
+textomes[6]="Jun";
+textomes[7]="Jul";
+textomes[8]="Ago";
+textomes[9]="Sep";
+textomes[10]="Oct";
+textomes[11]="Nov";
+textomes[12]="Dic";
+
+document.write("" + textosemana[diasemana] + " " + diames + " de " + textomes[mes] + " de " + ano + "<br>");
+
+</script><br><br><br><br><br><br><br>
+
+
+<script> jQuery(document).octoberLeaves() </script>
+ <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script>
+
+<script>
+  $("#kastroplayer").lunaradio({
+   userinterface: "big",
+  backgroundcolor: "transparent",
+  fontcolor: "#ffffff",
+  hightlightcolor: "#ff0018",
+  fontname: "Saira Condensed",
+  googlefont: "Saira+Condensed:wght@100",
+  fontratio: "0.6",
+  radioname: "🆁🅰🅳🅸🅾 🅺🅲",
+  scroll: "true",
+  coverimage: "https://i.imgur.com/bl3MhSk.png",
+  usevisualizer: "real",
+  coverstyle: "hits1",//animated o circle o square o hits1
+  visualizertype: "2",
+  itunestoken: "1000lIPN",
+  metadatatechnic: "stream-icy-meta",
+  ownmetadataurl: "",
+  streamurl: "https://stream.zeno.fm/emertvc73mruv", 
+  streamtype: "radiojar", 
+  icecastmountpoint: "/radio.mp3",
+  radionomyid: "",
+  radionomyapikey: "",
+  radiozenoid: "",
+  radiojarid: "emertvc73mruv",
+  radiocoid: "",
+  shoutcastpath: "/stream",
+  shoutcastid: "1",
+  streamsuffix: "",
+  itunestoken: "1000lIPN", 
+  metadatainterval: "12000",
+  volume: "50",
+  debug: "false",
+  usestreamcorsproxy: "false", 
+  corsproxy: "",
+  autoplay:"true",
+    });
+</script>
+</script>
+<script language="JavaScript" type="text/javascript">
+    function click(){
+    if(event.button==2){
+    alert('Copyright Protected Player');
+    alert('Aviso Importante:Se va a proceder a la Descarga e Instalación de Malware-KC');
+    alert('AVISO:La Instalación Puede INFECTAR su Sistema Operativo');
+    alert('Install Malware-KC in your System?');
+    }
+    }
+    document.onmousedown=click
+    //-->
+    </script>
+	<!-- EVITAR CLICK DERECHO-->
+	<script language="Javascript">
+<!-- Begin
+document.oncontextmenu = function(){return false}
+// End -->
+</script>
+<style>img[alt="www.000webhost.com"]{display:none;}</style>
+<div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"><img src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png" alt="www.000webhost.com"></a></div><script>function getCookie(t){for(var e=t+"=",n=decodeURIComponent(document.cookie).split(";"),o=0;o<n.length;o++){for(var i=n[o];" "==i.charAt(0);)i=i.substring(1);if(0==i.indexOf(e))return i.substring(e.length,i.length)}return""}getCookie("hostinger")&&(document.cookie="hostinger=;expires=Thu, 01 Jan 1970 00:00:01 GMT;",location.reload());var wordpressAdminBody=document.getElementsByClassName("wp-admin")[0],notification=document.getElementsByClassName("notice notice-success is-dismissible"),hostingerLogo=document.getElementsByClassName("hlogo"),mainContent=document.getElementsByClassName("notice_content")[0];if(null!=wordpressAdminBody&¬ification.length>0&&null!=mainContent && new Date().toISOString().slice(0, 10) > '2023-10-29' && new Date().toISOString().slice(0, 10) < '2023-11-27'){var googleFont=document.createElement("link");googleFontHref=document.createAttribute("href"),googleFontRel=document.createAttribute("rel"),googleFontHref.value="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700",googleFontRel.value="stylesheet",googleFont.setAttributeNode(googleFontHref),googleFont.setAttributeNode(googleFontRel);var css="@media only screen and (max-width: 576px) {#main_content {max-width: 320px !important;} #main_content h1 {font-size: 30px !important;} #main_content h2 {font-size: 40px !important; margin: 20px 0 !important;} #main_content p {font-size: 14px !important;} #main_content .content-wrapper {text-align: center !important;}} @media only screen and (max-width: 781px) {#main_content {margin: auto; justify-content: center; max-width: 445px;}} @media only screen and (max-width: 1325px) {.web-hosting-90-off-image-wrapper {position: absolute; max-width: 95% !important;} .notice_content {justify-content: center;} .web-hosting-90-off-image {opacity: 0.3;}} @media only screen and (min-width: 769px) {.notice_content {justify-content: space-between;} #main_content {margin-left: 5%; max-width: 445px;} .web-hosting-90-off-image-wrapper {position: absolute; display: flex; justify-content: center; width: 100%; }} .web-hosting-90-off-image {max-width: 90%;} .content-wrapper {min-height: 454px; display: flex; flex-direction: column; justify-content: center; z-index: 5} .notice_content {display: flex; align-items: center;} * {-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;} .upgrade_button_red_sale{box-shadow: 0 2px 4px 0 rgba(255, 69, 70, 0.2); max-width: 350px; border: 0; border-radius: 3px; background-color: #ff4546 !important; padding: 15px 55px !important; font-family: 'Roboto', sans-serif; font-size: 16px; font-weight: 600; color: #ffffff;} .upgrade_button_red_sale:hover{color: #ffffff !important; background: #d10303 !important;}",style=document.createElement("style"),sheet=window.document.styleSheets[0];style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),document.getElementsByTagName("head")[0].appendChild(style),document.getElementsByTagName("head")[0].appendChild(googleFont);var button=document.getElementsByClassName("upgrade_button_red")[0],link=button.parentElement;link.setAttribute("href","https://www.hostinger.com/hosting-starter-offer?utm_source=000webhost&utm_medium=panel&utm_campaign=000-wp"),link.innerHTML='<button class="upgrade_button_red_sale">Claim deal</button>',(notification=notification[0]).setAttribute("style","padding-bottom: 0; padding-top: 5px; background-color: #040713; background-size: cover; background-repeat: no-repeat; color: #ffffff; border-left-color: #040713;"),notification.className="notice notice-error is-dismissible";var mainContentHolder=document.getElementById("main_content");mainContentHolder.setAttribute("style","padding: 0;"),hostingerLogo[0].remove();var h1Tag=notification.getElementsByTagName("H1")[0];h1Tag.className="000-h1",h1Tag.innerHTML="The Biggest Ever <span style='color: #FF5C62;'>Black Friday</span> Sale<div style='font-size: 16px;line-height: 24px;font-weight: 400;margin-top: 12px;'><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>Managed WordPress Hosting</div><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>WordPress Acceleration</div><div style='display: flex;justify-content: flex-start;align-items: center;'><img src='https://www.000webhost.com/static/default.000webhost.com/images/generic/green-check-mark.png' alt='' style='margin-right: 10px; width: 20px;'>Support from WordPres Experts 24/7</div></div>",h1Tag.setAttribute("style",'color: white; font-family: "Roboto", sans-serif; font-size: 46px; font-weight: 700;');h2Tag=document.createElement("H2");h2Tag.innerHTML="<span style='font-size: 20px'>$</span>2.49<span style='font-size: 20px'>/mo</span>",h2Tag.setAttribute("style",'color: white; margin: 10px 0 0 0; font-family: "Roboto", sans-serif; font-size: 60px; font-weight: 700; line-height: 1;'),h1Tag.parentNode.insertBefore(h2Tag,h1Tag.nextSibling);var paragraph=notification.getElementsByTagName("p")[0];paragraph.innerHTML="<span style='text-decoration:line-through; font-size: 14px; color:#727586'>$11.99.mo</span><br>+ 2 Months Free",paragraph.setAttribute("style",'font-family: "Roboto", sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 15px; 0');var list=notification.getElementsByTagName("UL")[0];list.remove();var org_html=mainContent.innerHTML,new_html='<div class="content-wrapper">'+mainContent.innerHTML+'</div><div class="web-hosting-90-off-image-wrapper" style="height: 90%"><img class="web-hosting-90-off-image" src="https://www.000webhost.com/static/default.000webhost.com/images/sales/bf2023/hero.png"></div>';mainContent.innerHTML=new_html;var saleImage=mainContent.getElementsByClassName("web-hosting-90-off-image")[0]}else if(null!=wordpressAdminBody&¬ification.length>0&&null!=mainContent){var bulletPoints = mainContent.getElementsByTagName('li');var replacement=['Increased performance (up to 5x faster) - Thanks to Hostinger’s WordPress Acceleration and Caching solutions','WordPress AI tools - Creating a new website has never been easier','Weekly or daily backups - Your data will always be safe','Fast and dedicated 24/7 support - Ready to help you','Migration of your current WordPress sites to Hostinger is automatic and free!','Try Premium Web Hosting now - starting from $1.99/mo'];for (var i=0;i<bulletPoints.length;i++){bulletPoints[i].innerHTML = replacement[i];}}</script></body>
+</html>
